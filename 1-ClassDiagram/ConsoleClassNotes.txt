@@ -1,0 +1,31 @@
+The Console class in C# is a fundamental part of the System namespace, offering essential functionalities for interacting with the command-line console.
+It enables developers to read input from users and display output on the console window in C# applications. aThe Console class in C# is a part of the System namespace and provides essential functionalities for interacting with the command-line console. It allows developers to read input from users and display output on the console window in a C# application. Here's a detailed summary of the Console class:
+1.	Key Attributes:
+•	 BackgroundColor : Gets or sets the background color of the console window.
+•	 ForegroundColor : Gets or sets the foreground color used for console output.
+•	 BufferHeight  and  BufferWidth : Represents the height and width of the buffer area (number of rows and columns).
+•	 CursorLeft  and  CursorTop : Indicates the current column and row position of the cursor within the console window.
+•	 CursorVisible : Gets or sets a value indicating whether the cursor is visible.
+•	 CursorSize : Gets or sets the size of the cursor, which determines the height of the cursor's blinking block.
+•	 Title : Gets or sets the title displayed in the console window's title bar.
+•	 CapsLock : Gets a value indicating whether the Caps Lock key is in effect.
+•	Standard I/O and Redirection:
+•	 In ,  Out , and  Error : Provide access to the standard input, output, and error streams, respectively.
+•	 IsInputRedirected ,  IsOutputRedirected , and  IsErrorRedirected : Indicate whether input, output, or error streams are redirected to or from files.
+
+2.	Key Methods:
+•	 Beep() : Emits a beep sound from the console.
+•	 Clear() : Clears the console screen and moves the cursor to the top-left position.
+•	 MoveBufferArea() : Copies a specified rectangular region within the buffer.
+•	 Read() ,  ReadLine() , and  ReadKey() : Read characters, lines, or key presses from the standard input stream.
+•	 SetBufferSize() ,  SetCursorPosition() ,  SetWindowPosition() , and  SetWindowSize() : Allow customizing various settings related to the console.
+•	 Write()  and  WriteLine() : Write string values to the standard output stream.
+•	 SetError(TextWriter newError) : Sets the  TextWriter  used for error output.
+•	 SetIn(TextReader newIn) : Sets the  TextReader  used for standard input.
+•	 SetOut(TextWriter newOut) : Sets the  TextWriter  used for standard output.
+•	Console Size and Cursor Control:
+•	 LargestWindowHeight  and  LargestWindowWidth : Indicate the maximum size of the console window.
+•	 WindowHeight  and  WindowWidth : Represent the current height and width of the console window.
+•	 WindowLeft  and  WindowTop : Indicate the position of the console window on the screen.
+
+ Overall, the  Console  class plays a crucial role in text-based applications, providing developers with tools to interact with users through the console window and perform basic input/output operations. 

@@ -1,0 +1,25 @@
+The Object class is a fundamental class in C# and serves as the base class for all other classes in the .NET framework. It is part of the System namespace and provides essential methods and properties that are inherited by all C# classes.
+
+Methods:
+•	Equals(obj: object) : bool: Determines whether the current instance of the Object class is equal to another object. This method is overridden in derived classes to provide custom comparison logic.
+•	GetHashCode() : int: Computes and returns the hash code of the current instance. Hash codes are used in hash-based collections like dictionaries and sets.
+•	GetType() : Type: Returns the Type object representing the type of the current instance.
+•	ToString() : string: Converts the current instance to its string representation. The default implementation returns the fully qualified name of the type.
+•	Finalize() : void: This method is called by the garbage collector before an object is reclaimed. It is used for cleanup operations, but it is generally recommended to use the Dispose pattern for explicit resource cleanup.
+•	MemberwiseClone() : object: Creates a shallow copy of the current object. It duplicates the current object's fields, but does not copy objects that the fields refer to. For deep cloning, a custom implementation is required.
+•	ReferenceEquals(objA: object, objB: object) : bool: Determines whether two object references refer to the same object in memory. It returns true if both references point to the same memory location, otherwise false.
+
+•	The Object class implicitly serves as the base class for all C# classes, even if a class doesn't explicitly specify it in the class definition. All classes automatically inherit from Object.
+•	Derived classes can override the Equals() and GetHashCode() methods to provide custom comparison logic based on their unique attributes.
+•	The GetType() method is useful for obtaining the runtime type of an object, which is essential for reflection and other advanced programming techniques.
+•	The ToString() method is commonly used to obtain a textual representation of an object, useful for debugging, logging, and user interface purposes. Derived classes can override this method to provide a more meaningful representation.
+•	The Finalize() method is part of the finalization process in the garbage collection mechanism, but it is generally not recommended to rely on it for resource cleanup. It is better to use the Dispose pattern and IDisposable interface for explicit resource management.
+•	The MemberwiseClone() method is used to create a shallow copy of an object, duplicating its fields but not copying objects the fields refer to.
+•	The ReferenceEquals() method checks whether two object references point to the same object in memory and returns a boolean result.
+
+Important points:
+•	C# classes don’t require to declare the inheritance from the Object class as the inheritance is implicit.
+•	Every method defined in the Object class is available in all objects in the system as all classes in the .NET Framework are derived from the Object class.
+•	Derived classes can and do override Equals, Finalize, GetHashCode, and ToString methods of Object class.
+•	The process of boxing and unboxing a type internally causes a performance cost. Using the type-specific class to handle the frequently used types can improve the performance cost.
+
